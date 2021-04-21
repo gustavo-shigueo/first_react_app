@@ -63,4 +63,4 @@ app
 		}
   })
 
-app.listen(443, () => console.log('Working API'))
+app.listen(process.env.PORT || 3001, () => console.log('Working API'))
