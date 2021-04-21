@@ -41,7 +41,7 @@ app
     }
   })
 
-  app
+app
   .route('/todo/:id')
   .delete(async (req, res) => {
     try {
