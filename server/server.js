@@ -33,7 +33,6 @@ app
     try {
       const { id, title, description } = req.body
       const todo = new Todo({ _id: id, title, description, done: false })
-      console.log(req)
       await todo.save()
       res.status(201).json(todo)
     } catch (e) {
