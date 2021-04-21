@@ -3,13 +3,12 @@ const express = require('express')
 const Todo = require('./Model')
 const app = express()
 
-mongoose.connect((process.env.MONGODB_URI || 'mongodb://localhost/react_todolist'), {
-	useNewUrlParser: true,
+mongoose.connect((process.env.MONGODB_URI || 'mongodb+srv://GustavoS:1vQQb2CWdammknow@realmcluster.ytyml.mongodb.net/react_todolist?retryWrites=true&appName=react_todolist-pifwb:react_todolist:local-userpass'), {
+  useNewUrlParser: true,
 	useUnifiedTopology: true,
   useFindAndModify: true,
   useCreateIndex: true
 }).catch(console.log)
-console.log(process.env.MONGODB_URI)
 
 app.use(express.json())
 
