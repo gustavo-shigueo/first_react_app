@@ -1,12 +1,16 @@
 {
-	"name": "todolist-mern-stack",
-	"description": "My first MERN Stack app",
-	"version": "1.0.0",
-	"engines": {
-		"node": "14.16.1",
-		"npm": "7.5.4"
-	},
+  "name": "todolist-mern-stack",
+  "description": "My first MERN Stack app",
+  "version": "1.0.0",
+  "engines": {
+    "node": "14.16.1",
+    "npm": "7.5.4"
+  },
   "scripts": {
     "start": "node server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.5"
   }
 }
