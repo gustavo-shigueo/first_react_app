@@ -1,0 +1,57 @@
+.input-group {
+  margin-bottom: 2rem;
+  position: relative;
+  width: 100%;
+  height: 64px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  .label-text {
+    font-size: 1.35rem;
+    position: absolute;
+    bottom: 2px;
+    color: var(--text-secondary);
+    transition: transform 300ms ease, color 300ms ease;
+  }
+
+  label {
+    border-bottom: 1px solid var(--dark-bg);
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateX(-100%);
+      border-bottom: 1px solid var(--info);
+      transition: transform 300ms ease;
+      z-index: 5;
+    }
+  }
+
+  input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.35rem;
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    width: 100%;
+
+    &:focus + label::after {
+      transform: translateX(0);
+    }
+
+    &.has-text + label span, &:focus + label span {
+      transform: scale(.7) translate(-20%, -115%);
+      color: var(--text-terciary);
+    }
+  }
+}

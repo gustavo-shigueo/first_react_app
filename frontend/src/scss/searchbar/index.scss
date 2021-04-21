@@ -1,0 +1,52 @@
+@import '../variables';
+
+.searchbox {
+  position: relative;
+  background: white;
+  padding: 0 1em;
+  width: 100%;
+  height: 64px;
+  border-radius: 1000px;
+  border: 1px solid var(--text-secondary);
+
+  label {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  svg, span, input {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2em;
+  }
+
+  span {
+    position: absolute;
+    right: unset;
+    left: 1.5rem;
+    color: var(--text-secondary);
+    transition: color 300ms ease, transform 300ms ease;
+  }
+
+  input {
+    position: absolute;
+    right: unset;
+    left: 2rem;
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 80%;
+    font-size: 1.25rem;
+    transform: translateY(-35%);
+
+    &:focus + span, &:valid + span {
+      color: var(--text-terciary);
+      transform: translateY(-130%) scale(.7);
+    }
+  }
+}

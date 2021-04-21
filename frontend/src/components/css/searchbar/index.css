@@ -1,0 +1,61 @@
+:root {
+  --dark-bg: #232527;
+  --light-bg: #d0d0d0;
+  --light-bg-2: #e5e5e5;
+  --light-bg-3: #f0f0f0;
+  --light-bg-4: #fefefe;
+  --text-primary: #121212;
+  --text-secondary: #404040;
+  --text-terciary: #606060;
+  --light-text-primary: #efefef;
+  --light-text-secondary: #dadada;
+  --success: #24a210;
+  --danger: #fa2112;
+  --info: #3685df;
+}
+
+.searchbox {
+  position: relative;
+  background: white;
+  padding: 0 1em;
+  width: 100%;
+  height: 64px;
+  border-radius: 1000px;
+  border: 1px solid var(--text-secondary);
+}
+.searchbox label {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.searchbox svg, .searchbox span, .searchbox input {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2em;
+}
+.searchbox span {
+  position: absolute;
+  right: unset;
+  left: 1.5rem;
+  color: var(--text-secondary);
+  transition: color 300ms ease, transform 300ms ease;
+}
+.searchbox input {
+  position: absolute;
+  right: unset;
+  left: 2rem;
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 80%;
+  font-size: 1.25rem;
+  transform: translateY(-35%);
+}
+.searchbox input:focus + span, .searchbox input:valid + span {
+  color: var(--text-terciary);
+  transform: translateY(-130%) scale(0.7);
+}

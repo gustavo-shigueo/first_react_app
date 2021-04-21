@@ -1,0 +1,85 @@
+@import '../variables';
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  border-radius: 20px;
+  background: var(--light-bg-4);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
+
+  & + & {
+    margin-top: 1rem;
+  }
+
+  h2 {
+    color: var(--text-secondary);
+  }
+
+  p {
+    color: var(--text-terciary);
+  }
+
+  .buttons {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  input {
+    display: none;
+
+    & + label::after {
+      transform: translateX(-26px);
+      transition: transform 300ms ease;
+
+    }
+
+    &:checked + label::after {
+      transform: translateX(0px);
+    }
+  }
+
+  label {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 24px;
+    border-radius: 200px;
+    transition: background-color 300ms ease;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, .25);
+
+    &::after{
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      top: 2px;
+      right: 2px;
+      width: 20px;
+      height: 20px;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, .25);
+      background: var(--light-bg-4);
+    }
+  }
+
+  button {
+    margin-right: 0.5rem;
+    background: red;
+    outline: none;
+    border: none;
+    color: white;
+    padding: .3rem;
+    width: 24.59px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .4);
+
+    svg {
+      transform: translate(0.5px, 1px);
+      filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .4))
+    }
+
+    &:active svg {
+      transform: translate(0.5px, 1px);
+    }
+  } 
+}

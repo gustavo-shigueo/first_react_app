@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--light-bg);
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+body .container {
+  background-color: var(--light-bg-2);
+  width: 80%;
+  margin: 3em auto;
+  overflow-y: hidden;
+  padding: 3em;
+  border: 1px solid var(--text-secondary);
+  border-radius: 16px;
+  max-height: 80vh;
+  overflow-y: hidden;
+}
+
+.main-section {
+  margin-top: 1.5em;
+  padding: 3em;
+  background: var(--light-bg-3);
+  border-radius: 50px;
+  border: 1px solid var(--text-secondary);
+  position: relative;
+  overflow-y: hidden;
+  max-height: 550px;
+}
+
+.main-section span {
+  display: flex;
+  justify-content: space-between;
+}
+
+.scrollable {
+  overflow-y: auto;
+  height: calc(550px - 3em);
+  max-height: calc(550px - 3em);
+  padding: 0 1em 1em 1em;
+}
+
+.scrollable::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollable::-webkit-scrollbar-track {
+  transform: scaleY(.75);
+  width: 5px;
+  background: var(--light-bg-2);
+  border-radius: 50px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  transform: scaleY(.75);
+  background: #bbb;
+  border-radius: 50px;
+  filter: brightness(5%);
+}
+
+.scrollable::-webkit-scrollbar-button {
+  display: none;
+}
+
+.btn {
+  color: var(--light-text-primary);
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0 1em;
+  border: none;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+  outline: none;
+  min-height: 37px;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.btn-success {
+  background: var(--success);
+}
+
+.btn-danger {
+  background: var(--danger);
+}
+
+.btn-info {
+  background: var(--info);
+}
