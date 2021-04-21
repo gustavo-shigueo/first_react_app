@@ -42,7 +42,6 @@ body .container {
 
 .scrollable {
   overflow-y: auto;
-  height: calc(550px - 3em);
   max-height: calc(550px - 3em);
   padding: 0 1em 1em 1em;
 }
