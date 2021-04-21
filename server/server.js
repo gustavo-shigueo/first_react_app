@@ -8,7 +8,7 @@ mongoose.connect((process.env.MONGODB_URI || 'mongodb://localhost/react_todolist
 	useUnifiedTopology: true,
   useFindAndModify: true,
   useCreateIndex: true
-})
+}).catch(console.log)
 
 app.use(express.json())
 
