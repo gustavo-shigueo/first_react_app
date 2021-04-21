@@ -3,7 +3,7 @@ const express = require('express')
 const Todo = require('./Model')
 const app = express()
 
-mongoose.connect('mongodb://localhost/react_todolist', {
+mongoose.connect((process.env.MONGODB_URI || 'mongodb://localhost/react_todolist'), {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
   useFindAndModify: true,
